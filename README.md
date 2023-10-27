@@ -12,7 +12,7 @@ Follow me to get updated when I try the new approach.
 # Project Struture
 We have a preprocessing notebook to explore and clean the raw dataset. We save this cleaned dataset on the *'datasets'* folder as a *.csv* file, both of them in the *'notebooks'* folder.<br>
 On the *'notebooks'* folder we also have the notebooks of the models we are building to solve this problem. 
-'''
+```
 card_caregorizer
 ├──notebooks/     # the notebooks folder, where the models are stored
 │  ├──datasets/   # folder where the datasets are stored
@@ -21,7 +21,7 @@ card_caregorizer
 │  ├──preprocessing_data.ipynb # nootebook where we clean and explore the dataset
 │  └──knn_estimator_for_card_category.ipynb # building our KNN model 
 └──README.md # this file
-'''
+```
 
 # Any doubts
 
