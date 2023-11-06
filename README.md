@@ -1,28 +1,46 @@
+![credit card](https://github.com/dennerbocardi/card_categorizer/blob/main/images/credit_card.jpg)
+
 # A categorizer for Credit Card Segment
-Today on most banks we have some credit card categories. Those categories define some benefits to the customers. In general, the most popular category has no benefits at all, but once the categories are getting less popular the benefits are getting better.<p>
 
-The problem we have here is trying to determine which category we should put a person in, given some financial and demographic data. We need to build a good categorizer to make our model accurate and to be sure that the model understands all the categories and not put everyone on the most popular one. 
+## Overview
+Banks engage in credit card segmentation to tailor their offerings to diverse customores needs and risk profiles. By categorizing customers based on their creditworthiness, spending habits, and financial behavior, banks can create trageted credit card products. This approach ensures that customers receive suitable credit limits, interest rates, rewards, and benefits, enhancing customer satisfactions and loyalty. Additionaly, segmentation allows banks tp manage risck effectively by aligning credit limits with individual repayment capacities, minimizing the likelihood of defaults and ensuring responsible lending practices. 
 
-I already tried to solve our problem clusterizing the clients with KNN, but, although it had great accuracy, the problem is that the model set almost everyone to the most popular category, which represents 93% of our database. I.e., the model is just smart because the database is unbalanced. We need to get better results.
+# The Problem
+We need to build a categorizer to, given some financial and demographic information, we can set the client in its proper category. We have 4 caregories: "Blue", "Silver", "Gold" and "Platinum". Each one more demanding than the other, but also with more benefits and minor rates. We also have an unbalanced group that is the "Blue" category: 93% of the public is on that category. With that in mind we need to get a deeper look on how our model is fitting the customers, becouse if it fit everyone on the "Blue" category, some metrics (such as accuracy) will be high, for the model will fit right for most people, but it means that the model can only identify the "Blue" category and not the others. We will build a Confusion Matrix to evaluate that. 
 
-The next step is to build a deep neural network to see how it performs to solve the problem. 
+## The dataset
+This dataset is a fictional exemple. I get is on Kaggle, [here](https://www.kaggle.com/datasets/thedevastator/predicting-credit-card-customer-attrition-with-m)
 
-Follow me to get updated when I try the new approach.  
+## Approach
+The approach I am assuming here is quite simple
+- We load, explore and clean the dataset;
+- We preprocees the dataset to perfmorm our models; 
+- Test some different model approaches (KNN, XGBoost, and Neural Network);
+- Build the confusion matrix for each model;
+- Evaluate the mdodels;
+- Save the most evaluated model;
 
-# Project Struture
-We have a preprocessing notebook to explore and clean the raw dataset. We save this cleaned dataset on the *'datasets'* folder as a *.csv* file, both of them in the *'notebooks'* folder.<br>
-On the *'notebooks'* folder we also have the notebooks of the models we are building to solve this problem. 
+At the end of the projec we must have a good cart categorizer. Right now the only model I built was the KNN, in a next update I will perfmorm and evaluate the XGBoost. 
+
+## Project Struture
+We have a preprocessing notebook to explore and clean the raw dataset. We save this cleaned dataset on the *'datasets'* folder as a *.csv* file, both of them in the *'src'* folder.<br>
+On the *'src'* folder we also have the notebooks of the models we are building to solve this problem. 
 ```
 card_caregorizer
-├──notebooks/     # the notebooks folder, where the models are stored
-│  ├──datasets/   # folder where the datasets are stored
-│  │  ├──bank_segmentation_data.csv # our raw dataset
-│  │  └──preprocessed_dataset.csv # the clean dataset  
-│  ├──preprocessing_data.ipynb # nootebook where we clean and explore the dataset
-│  └──knn_estimator_for_card_category.ipynb # building our KNN model 
-└──README.md # this file
+├── src/     # the notebooks folder, where the models are stored
+│  ├── datasets/   # folder where the datasets are stored
+│  │  ├── bank_segmentation_data.csv # our raw dataset
+│  │  └── preprocessed_dataset.csv # the clean dataset  
+│  ├── preprocessing_data.ipynb # nootebook where we clean and explore the dataset
+│  └── knn_estimator_for_card_category.ipynb # building our KNN model 
+├── images / # folder with some images I might use (for aesthetic purposes only)
+└── README.md # this file
 ```
 
-# Any doubts
+## Lenguages and Tools
+<p align="left">  <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a><a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/><a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> <a href="https://jupyter.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" alt="jupyter" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a>
 
-- Denner Bocardi: denner.bocardi@gmail.com
+## Any doubts
+Contact me
+ - Email: denner.bocardi@gmail.com
+ - LinkedIn: https://www.linkedin.com/in/dennersdenner/
