@@ -16,6 +16,10 @@ The approach I am assuming here is quite simple
 - We load, explore and clean the dataset;
 - We preprocees the dataset to perfmorm our models; 
 - Test some different model approaches (KNN, XGBoost, and Neural Network);
+    We already have tried: 
+    - [x] k-Nearest Neighbors
+    - [ ] Neural Network (with TensorFlow)
+    - [ ] Random Forest (with boosting)
 - Build the confusion matrix for each model;
 - Evaluate the mdodels;
 - Save the most evaluated model;
