@@ -36,6 +36,7 @@ card_caregorizer
 │  │  ├── bank_segmentation_data.csv # our raw dataset
 │  │  └── preprocessed_dataset.csv # the clean dataset  
 │  ├── preprocessing_data.ipynb # nootebook where we clean and explore the dataset
+│  ├── estimator_for_card_category_with_tensorflow.ipynb # the neural netework approach 
 │  └── knn_estimator_for_card_category.ipynb # building our KNN model 
 ├── images / # folder with some images I might use (for aesthetic purposes only)
 └── README.md # this file
