@@ -18,7 +18,7 @@ The approach I am assuming here is quite simple
 - Test some different model approaches (KNN, XGBoost, and Neural Network);
     We already have tried: 
     - [x] k-Nearest Neighbors
-    - [ ] Neural Network (with TensorFlow)
+    - [x] Neural Network (with TensorFlow)
     - [ ] Random Forest (with boosting)
 - Build the confusion matrix for each model;
 - Evaluate the mdodels;
