@@ -24,7 +24,7 @@ The approach I am assuming here is quite simple
 - Evaluate the mdodels;
 - Save the most evaluated model;
 
-At the end of the projec we must have a good cart categorizer. Right now the only model I built was the KNN, in a next update I will perfmorm and evaluate the XGBoost. 
+At the end of the project we must have a good card categorizer. Right now the only model I built was the KNN, in a next update I will perfmorm and evaluate the XGBoost. 
 
 ## Project Struture
 We have a preprocessing notebook to explore and clean the raw dataset. We save this cleaned dataset on the *'datasets'* folder as a *.csv* file, both of them in the *'src'* folder.<br>
